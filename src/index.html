@@ -13,20 +13,25 @@
         <header class="header">
             <h1>Advanced Todo App</h1>
         </header>
-        <div id="app" class="content">
-            <!-- Login Form -->
-            <form class="form" id="loginForm">
-                <input class="input" type="text" id="username" placeholder="Username" required>
-                <input class="input" type="password" id="password" placeholder="Password" required>
-                <button class="button" type="submit">Login</button>
-            </form>
-
-            <!-- Signup Form -->
-            <form class="form" id="signupForm">
-                <input class="input" type="text" id="newUsername" placeholder="New Username" required>
-                <input class="input" type="password" id="newPassword" placeholder="New Password" required>
-                <button class="button" type="submit">Signup</button>
-            </form>
+        <div class="auth-container">
+            <div id="loginToggle" class="auth-toggle active">Login</div>
+            <div id="signupToggle" class="auth-toggle">Signup</div>
+        
+            <div class="forms">
+                <!-- Login Form -->
+                <form class="form login-form" id="loginForm">
+                    <input class="input" type="text" id="username" placeholder="Username" required>
+                    <input class="input" type="password" id="password" placeholder="Password" required>
+                    <button class="button" type="submit">Login</button>
+                </form>
+        
+                <!-- Signup Form -->
+                <form class="form signup-form" id="signupForm">
+                    <input class="input" type="text" id="newUsername" placeholder="New Username" required>
+                    <input class="input" type="password" id="newPassword" placeholder="New Password" required>
+                    <button class="button" type="submit">Signup</button>
+                </form>
+            </div>
 
             <div class="actions">
                 <button class="action-button" id="clearAll">Clear All Tasks</button>

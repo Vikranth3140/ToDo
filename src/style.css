@@ -1,3 +1,5 @@
+/* style.css */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -28,6 +30,44 @@ body {
     border-radius: 0 0 8px 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+}
+
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth-toggle {
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #343a40;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #007bff;
+}
+
+.auth-toggle.active {
+    background-color: #0056b3;
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form,
+.signup-form {
+    display: none;
+}
+
+.login-form.active,
+.signup-form.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
 }
 
 .form {

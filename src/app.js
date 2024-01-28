@@ -1,5 +1,3 @@
-// app.js
-
 document.addEventListener('DOMContentLoaded', function () {
     const taskForm = document.getElementById('taskForm');
     const taskInput = document.getElementById('taskInput');
@@ -9,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const sortTasksButton = document.getElementById('sortTasks');
     const totalTasksCount = document.getElementById('totalTasks');
     const completedTasksCount = document.getElementById('completedTasks');
+    const loginToggle = document.getElementById('loginToggle');
+    const signupToggle = document.getElementById('signupToggle');
     const loginForm = document.getElementById('loginForm');
     const signupForm = document.getElementById('signupForm');
 
@@ -31,6 +31,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     sortTasksButton.addEventListener('click', function () {
         sortTasks();
+    });
+
+    loginToggle.addEventListener('click', function () {
+        toggleForms('login');
+    });
+
+    signupToggle.addEventListener('click', function () {
+        toggleForms('signup');
     });
 
     loginForm.addEventListener('submit', function (event) {
@@ -145,5 +153,19 @@ document.addEventListener('DOMContentLoaded', function () {
     function signup(username, password) {
         // For simplicity, let's just display an alert for successful signup
         alert(`Signup successful! Welcome, ${username}!`);
+    }
+
+    function toggleForms(activeForm) {
+        if (activeForm === 'login') {
+            loginToggle.classList.add('active');
+            signupToggle.classList.remove('active');
+            loginForm.classList.add('active');
+            signupForm.classList.remove('active');
+        } else if (activeForm === 'signup') {
+            signupToggle.classList.add('active');
+            loginToggle.classList.remove('active');
+            signupForm.classList.add('active');
+            loginForm.classList.remove('active');
+        }
     }
 });
