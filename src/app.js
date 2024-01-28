@@ -1,4 +1,4 @@
-// app.js or script.js
+// app.js
 
 document.addEventListener('DOMContentLoaded', function () {
     const taskForm = document.getElementById('taskForm');
