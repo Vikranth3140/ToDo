@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-    max-width: 600px;
+    max-width: 800px;
     width: 100%;
 }
 
@@ -79,6 +79,14 @@ body {
     border-color: #0056b3;
 }
 
+.task-stats {
+    margin-bottom: 20px;
+}
+
+.task-stats p {
+    margin: 0;
+}
+
 .task-list {
     list-style: none;
     padding: 0;
@@ -99,6 +107,20 @@ body {
 
 .checkbox {
     margin-right: 10px;
+}
+
+.edit-button {
+    padding: 5px 10px;
+    background-color: #ffc107;
+    color: #343a40;
+    border: 1px solid #ffc107;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.edit-button:hover {
+    background-color: #e0a800;
+    border-color: #e0a800;
 }
 
 .delete-button {
