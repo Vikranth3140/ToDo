@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const sortTasksButton = document.getElementById('sortTasks');
     const totalTasksCount = document.getElementById('totalTasks');
     const completedTasksCount = document.getElementById('completedTasks');
+    const loginForm = document.getElementById('loginForm');
+    const signupForm = document.getElementById('signupForm');
 
     taskForm.addEventListener('submit', function (event) {
         event.preventDefault();
@@ -29,6 +31,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
     sortTasksButton.addEventListener('click', function () {
         sortTasks();
+    });
+
+    loginForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        const username = document.getElementById('username').value.trim();
+        const password = document.getElementById('password').value.trim();
+        login(username, password);
+    });
+
+    signupForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        const newUsername = document.getElementById('newUsername').value.trim();
+        const newPassword = document.getElementById('newPassword').value.trim();
+        signup(newUsername, newPassword);
     });
 
     function addTask(taskText, isCompleted = false) {
@@ -115,5 +131,19 @@ document.addEventListener('DOMContentLoaded', function () {
         const completedTasks = taskList.querySelectorAll('.task.completed').length;
         totalTasksCount.textContent = totalTasks;
         completedTasksCount.textContent = completedTasks;
+    }
+
+    function login(username, password) {
+        // For simplicity, let's assume a user with username 'user' and password 'pass'
+        if (username === 'user' && password === 'pass') {
+            alert('Login successful!');
+        } else {
+            alert('Invalid username or password.');
+        }
+    }
+
+    function signup(username, password) {
+        // For simplicity, let's just display an alert for successful signup
+        alert(`Signup successful! Welcome, ${username}!`);
     }
 });
