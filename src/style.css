@@ -1,5 +1,3 @@
-/* style.css */
-
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -22,14 +20,6 @@ body {
     text-align: center;
     padding: 20px;
     border-radius: 8px 8px 0 0;
-}
-
-.content {
-    background-color: #343a40;
-    padding: 20px;
-    border-radius: 0 0 8px 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
 }
 
 .auth-container {
@@ -68,6 +58,14 @@ body {
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
+}
+
+.content {
+    background-color: #343a40;
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .form {
@@ -158,7 +156,7 @@ body {
 
 .edit-button:hover {
     background-color: #e0a800;
-    border-color:#e0a800;
+    border-color: #e0a800;
 }
 
 .delete-button {
@@ -171,14 +169,14 @@ body {
 }
 
 .delete-button:hover {
-    background-color: #bd2130;
-    border-color: #bd2130;
+background-color: #bd2130;
+border-color: #bd2130;
 }
 
 .footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #343a40;
-    color: #fff;
-    border-radius: 0 0 8px 8px;
+text-align: center;
+padding: 10px;
+background-color: #343a40;
+color: #fff;
+border-radius: 0 0 8px 8px;
 }

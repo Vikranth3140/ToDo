@@ -4,19 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Todo App</title>
+    <title>Todo App</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
         <header class="header">
-            <h1>Advanced Todo App</h1>
+            <h1>Todo App</h1>
         </header>
+
+        <!-- Authentication Toggle and Forms -->
         <div class="auth-container">
             <div id="loginToggle" class="auth-toggle active">Login</div>
-            <div id="signupToggle" class="auth-toggle">Signup</div>
-        
+            <div id="signupToggle" class="auth-toggle">Signup">
+
+            </div>
+
             <div class="forms">
                 <!-- Login Form -->
                 <form class="form login-form" id="loginForm">
@@ -24,7 +28,7 @@
                     <input class="input" type="password" id="password" placeholder="Password" required>
                     <button class="button" type="submit">Login</button>
                 </form>
-        
+
                 <!-- Signup Form -->
                 <form class="form signup-form" id="signupForm">
                     <input class="input" type="text" id="newUsername" placeholder="New Username" required>
@@ -32,7 +36,9 @@
                     <button class="button" type="submit">Signup</button>
                 </form>
             </div>
+        </div>
 
+        <div id="app" class="content">
             <div class="actions">
                 <button class="action-button" id="clearAll">Clear All Tasks</button>
                 <button class="action-button" id="clearCompleted">Clear Completed Tasks</button>
