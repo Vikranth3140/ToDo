@@ -12,6 +12,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const loginForm = document.getElementById('loginForm');
     const signupForm = document.getElementById('signupForm');
 
+    // Hide the authentication toggle and forms
+    const authContainer = document.querySelector('.auth-container');
+    authContainer.style.display = 'none';
+
     taskForm.addEventListener('submit', function (event) {
         event.preventDefault();
         const taskText = taskInput.value.trim();
@@ -161,11 +165,11 @@ document.addEventListener('DOMContentLoaded', function () {
             signupToggle.classList.remove('active');
             loginForm.classList.add('active');
             signupForm.classList.remove('active');
-        } else if (activeForm === 'signup') {
-            signupToggle.classList.add('active');
-            loginToggle.classList.remove('active');
-            signupForm.classList.add('active');
-            loginForm.classList.remove('active');
+            } else if (activeForm === 'signup') {
+                signupToggle.classList.add('active');
+                loginToggle.classList.remove('active');
+                signupForm.classList.add('active');
+                loginForm.classList.remove('active');
+            }
         }
-    }
 });

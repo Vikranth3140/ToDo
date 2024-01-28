@@ -5,7 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #343a40;
+    background-color: #1a1a1a;  /* Updated background color to black */
     color: #fff;
 }
 
@@ -15,7 +15,7 @@ body {
 }
 
 .header {
-    background-color: #dc3545;
+    background-color: #001f3f;  /* Updated header color to dark blue */
     color: #fff;
     text-align: center;
     padding: 20px;
@@ -25,7 +25,6 @@ body {
 .auth-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .auth-toggle {
@@ -61,7 +60,7 @@ body {
 }
 
 .content {
-    background-color: #343a40;
+    background-color: #1a1a1a;  /* Updated background color to black */
     padding: 20px;
     border-radius: 0 0 8px 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -106,77 +105,59 @@ body {
     color: #fff;
     border: 1px solid #007bff;
     border-radius: 4px;
-    margin-right: 10px;
     cursor: pointer;
+    margin-right: 10px;
 }
 
 .action-button:hover {
     background-color: #0056b3;
     border-color: #0056b3;
 }
-
-.task-stats {
-    margin-bottom: 20px;
-}
-
-.task-stats p {
-    margin: 0;
-}
-
+    
 .task-list {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
-
+    
 .task {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    background-color: #343a40;
+    color: #fff;
     padding: 10px;
-    border-bottom: 1px solid #495057;
+    margin-bottom: 10px;
+    border-radius: 4px;
 }
-
+    
 .task.completed {
     text-decoration: line-through;
-    color: #6c757d;
+    opacity: 0.7;
 }
-
+    
 .checkbox {
     margin-right: 10px;
 }
-
-.edit-button {
-    padding: 5px 10px;
-    background-color: #ffc107;
-    color: #343a40;
-    border: 1px solid #ffc107;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.edit-button:hover {
-    background-color: #e0a800;
-    border-color: #e0a800;
-}
-
-.delete-button {
-    padding: 5px 10px;
-    background-color: #dc3545;
+    
+.edit-button, .delete-button {
+    padding: 8px;
+    background-color: #007bff;
     color: #fff;
-    border: 1px solid #dc3545;
+    border: 1px solid #007bff;
     border-radius: 4px;
     cursor: pointer;
+    margin-left: 5px;
 }
-
-.delete-button:hover {
-background-color: #bd2130;
-border-color: #bd2130;
+    
+.edit-button:hover, .delete-button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
 }
-
+    
 .footer {
-text-align: center;
-padding: 10px;
-background-color: #343a40;
-color: #fff;
-border-radius: 0 0 8px 8px;
+    text-align: center;
+    padding: 10px;
+    background-color: #001f3f;  /* Updated footer color to dark blue */
+    color: #fff;
+    border-radius: 0 0 8px 8px;
 }
