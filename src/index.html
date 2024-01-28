@@ -1,3 +1,5 @@
+<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,30 +15,11 @@
         <header class="header">
             <h1>Todo App</h1>
         </header>
-
-        <!-- Authentication Toggle and Forms -->
-        <div class="auth-container">
-            <div id="loginToggle" class="auth-toggle active">Login</div>
-            <div id="signupToggle" class="auth-toggle">Signup</div>
-
-            <div class="forms">
-                <!-- Login Form -->
-                <form class="form login-form" id="loginForm">
-                    <input class="input" type="text" id="username" placeholder="Username" required>
-                    <input class="input" type="password" id="password" placeholder="Password" required>
-                    <button class="button" type="submit">Login</button>
-                </form>
-
-                <!-- Signup Form -->
-                <form class="form signup-form" id="signupForm">
-                    <input class="input" type="text" id="newUsername" placeholder="New Username" required>
-                    <input class="input" type="password" id="newPassword" placeholder="New Password" required>
-                    <button class="button" type="submit">Signup</button>
-                </form>
-            </div>
-        </div>
-
         <div id="app" class="content">
+            <form class="form" id="taskForm">
+                <input class="input" type="text" id="taskInput" placeholder="Add a new task" required>
+                <button class="button" type="submit">Add Task</button>
+            </form>
             <div class="actions">
                 <button class="action-button" id="clearAll">Clear All Tasks</button>
                 <button class="action-button" id="clearCompleted">Clear Completed Tasks</button>
@@ -49,10 +32,6 @@
             <ul id="taskList" class="task-list">
                 <!-- Todo list content will go here -->
             </ul>
-            <form class="form" id="taskForm">
-                <input class="input" type="text" id="taskInput" placeholder="Add a new task..." required>
-                <button class="button" type="submit">Add Task</button>
-            </form>
         </div>
         <footer class="footer">
             <!-- Footer content (if needed) -->

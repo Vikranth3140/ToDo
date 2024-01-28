@@ -1,3 +1,5 @@
+// app.js or script.js
+
 document.addEventListener('DOMContentLoaded', function () {
     const taskForm = document.getElementById('taskForm');
     const taskInput = document.getElementById('taskInput');
@@ -7,14 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const sortTasksButton = document.getElementById('sortTasks');
     const totalTasksCount = document.getElementById('totalTasks');
     const completedTasksCount = document.getElementById('completedTasks');
-    const loginToggle = document.getElementById('loginToggle');
-    const signupToggle = document.getElementById('signupToggle');
-    const loginForm = document.getElementById('loginForm');
-    const signupForm = document.getElementById('signupForm');
-
-    // Hide the authentication toggle and forms
-    const authContainer = document.querySelector('.auth-container');
-    authContainer.style.display = 'none';
 
     taskForm.addEventListener('submit', function (event) {
         event.preventDefault();
@@ -35,28 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     sortTasksButton.addEventListener('click', function () {
         sortTasks();
-    });
-
-    loginToggle.addEventListener('click', function () {
-        toggleForms('login');
-    });
-
-    signupToggle.addEventListener('click', function () {
-        toggleForms('signup');
-    });
-
-    loginForm.addEventListener('submit', function (event) {
-        event.preventDefault();
-        const username = document.getElementById('username').value.trim();
-        const password = document.getElementById('password').value.trim();
-        login(username, password);
-    });
-
-    signupForm.addEventListener('submit', function (event) {
-        event.preventDefault();
-        const newUsername = document.getElementById('newUsername').value.trim();
-        const newPassword = document.getElementById('newPassword').value.trim();
-        signup(newUsername, newPassword);
     });
 
     function addTask(taskText, isCompleted = false) {
@@ -144,32 +116,4 @@ document.addEventListener('DOMContentLoaded', function () {
         totalTasksCount.textContent = totalTasks;
         completedTasksCount.textContent = completedTasks;
     }
-
-    function login(username, password) {
-        // For simplicity, let's assume a user with username 'user' and password 'pass'
-        if (username === 'user' && password === 'pass') {
-            alert('Login successful!');
-        } else {
-            alert('Invalid username or password.');
-        }
-    }
-
-    function signup(username, password) {
-        // For simplicity, let's just display an alert for successful signup
-        alert(`Signup successful! Welcome, ${username}!`);
-    }
-
-    function toggleForms(activeForm) {
-        if (activeForm === 'login') {
-            loginToggle.classList.add('active');
-            signupToggle.classList.remove('active');
-            loginForm.classList.add('active');
-            signupForm.classList.remove('active');
-            } else if (activeForm === 'signup') {
-                signupToggle.classList.add('active');
-                loginToggle.classList.remove('active');
-                signupForm.classList.add('active');
-                loginForm.classList.remove('active');
-            }
-        }
 });
