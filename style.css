@@ -138,9 +138,27 @@ body {
 }
 
 .footer {
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
-    background-color: #343a40;
-    color: #fff;
     border-radius: 0 0 8px 8px;
+    font-size: 14px;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    order: 1;
+}
+
+.sourcecode {
+    order: 2;
 }
