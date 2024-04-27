@@ -4,6 +4,8 @@ Todo App
 Welcome to the Todo App!
 \
 This simple web application empowers you to manage tasks efficiently, built solely using HTML, CSS and JavaScript.
+\
+View it here - [Liive Demo](https://vikranth3140.github.io/ToDo/)
 
 Features
 --------
